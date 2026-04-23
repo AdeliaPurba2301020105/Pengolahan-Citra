@@ -4,7 +4,7 @@
 
 * **Nama**:
 * Adelia Kristianti Purba 2301020105
-* Widuri Eka Febrianti
+* Widuri Eka Febrianti 23010200017
 
 Program Studi Teknik Informatika
 Fakultas Teknik
