@@ -1,15 +1,10 @@
-# 📊 Histogram Specification — Pengolahan Citra Digital
+# Histogram Specification — Pengolahan Citra Digital
 
-## 👩‍💻 Disusun Oleh
+## Disusun Oleh
 
-* **Nama**: [NAMA LENGKAP]
-* **NIM**: [NIM]
-
-## 👨‍🏫 Dosen Pengampu
-
-* [NAMA DOSEN]
-
-## 🏫 Institusi
+* **Nama**:
+* Adelia Kristianti Purba 2301020105
+* Widuri Eka Febrianti
 
 Program Studi Teknik Informatika
 Fakultas Teknik
@@ -18,9 +13,8 @@ Universitas Maritim Raja Ali Haji
 
 ---
 
-# 📌 BAB I PENDAHULUAN
 
-## 1.1 Latar Belakang
+## Latar Belakang
 
 Citra digital merupakan representasi visual dari suatu objek yang diperoleh dari perangkat seperti kamera atau sensor. Dalam praktiknya, citra sering mengalami penurunan kualitas seperti terlalu gelap, terlalu terang, atau kontras rendah.
 
@@ -28,7 +22,7 @@ Salah satu metode peningkatan kualitas citra adalah **Histogram Specification (H
 
 ---
 
-## 1.2 Rumusan Masalah
+## Rumusan Masalah
 
 * Apa itu Histogram Specification?
 * Bagaimana algoritmanya?
@@ -37,7 +31,7 @@ Salah satu metode peningkatan kualitas citra adalah **Histogram Specification (H
 
 ---
 
-## 1.3 Tujuan
+## Tujuan
 
 * Memahami konsep Histogram Specification
 * Mengimplementasikan dalam Python
@@ -45,9 +39,9 @@ Salah satu metode peningkatan kualitas citra adalah **Histogram Specification (H
 
 ---
 
-# 📚 BAB II TINJAUAN PUSTAKA
+# TINJAUAN PUSTAKA
 
-## 2.1 Citra Digital
+## Citra Digital
 
 Citra digital terdiri dari piksel dengan nilai intensitas:
 
@@ -56,7 +50,7 @@ Citra digital terdiri dari piksel dengan nilai intensitas:
 
 ---
 
-## 2.2 Histogram Citra
+## Histogram Citra
 
 Histogram menyatakan distribusi intensitas piksel:
 
@@ -71,7 +65,7 @@ Keterangan:
 
 ---
 
-## 2.3 Histogram Equalization
+## Histogram Equalization
 
 Transformasi:
 
@@ -86,7 +80,7 @@ Keterangan:
 
 ---
 
-## 2.4 Histogram Specification
+## Histogram Specification
 
 Mapping dilakukan dengan:
 
@@ -96,7 +90,7 @@ t = \arg\min_t \left| CDF_{target}(t) - CDF_{source}(s) \right|
 
 ---
 
-## 2.5 Cumulative Distribution Function (CDF)
+## Cumulative Distribution Function (CDF)
 
 [
 CDF(k) = \sum_{i=0}^{k} \frac{h(i)}{MN}
@@ -104,7 +98,7 @@ CDF(k) = \sum_{i=0}^{k} \frac{h(i)}{MN}
 
 ---
 
-## 2.6 Distribusi Target
+## Distribusi Target
 
 ### 🔹 Uniform
 
@@ -132,9 +126,7 @@ p(x) = \lambda e^{-\lambda x}
 
 ---
 
-# 🧠 BAB III PEMBAHASAN
-
-## 3.1 Deskripsi Program
+## Deskripsi Program
 
 Program GUI Python dengan fitur:
 
@@ -146,7 +138,7 @@ Program GUI Python dengan fitur:
 
 ---
 
-## 3.2 Algoritma
+## Algoritma
 
 1. Upload gambar
 2. Konversi ke grayscale
@@ -158,7 +150,7 @@ Program GUI Python dengan fitur:
 
 ---
 
-## 3.3 Contoh Kode Inti
+## Contoh Kode Inti
 
 ```python
 mapping = np.zeros(256, dtype=np.uint8)
@@ -196,55 +188,10 @@ for s in range(256):
 
 ---
 
-# 🧾 BAB IV PENUTUP
-
-## 4.1 Kesimpulan
-
-* Histogram Specification lebih fleksibel dari Equalization
-* Mapping berbasis CDF
-* Distribusi mempengaruhi hasil
-
-## 4.2 Saran
-
-* Tambah PSNR & MSE
-* Support RGB per channel
-* Tambah fitur zoom
-
----
-
-# 📚 DAFTAR PUSTAKA
-
-* Gonzalez & Woods (2018)
-* Pratt (2007)
-* Szeliski (2022)
-* https://numpy.org
-* https://pillow.readthedocs.io
-
----
-
-# ⚙️ CARA MENJALANKAN PROGRAM
+#CARA MENJALANKAN PROGRAM
 
 ```bash
 pip install numpy pillow matplotlib
 python histogram_specification.py
 ```
 
----
-
-# 📁 STRUKTUR PROJECT
-
-```
-PengolahanCitra/
-│
-├── histogram_specification.py
-├── images/
-│   ├── original.png
-│   ├── hasil.png
-│   └── histogram.png
-```
-
----
-
-# 🚀 AUTHOR
-
-Adelia Purba
